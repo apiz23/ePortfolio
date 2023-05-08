@@ -1,6 +1,7 @@
 import React from "react";
 import { Contact } from "./Contact";
 import Exp from "./Exp";
+import Footer from "./Footer";
 import intro from "./img/intro.JPG";
 import Intro from "./Intro";
 import Learning from "./Learning";
@@ -25,6 +26,7 @@ export default function Main() {
 			<Learning />
 			<Exp />
 			<Contact />
+			<Footer />
 		</>
 	);
 }

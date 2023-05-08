@@ -33,20 +33,29 @@ export const Contact = () => {
 									role="button"
 									aria-expanded="false"
 									aria-controls="multiCollapseExample1"
-                                    id="btnContact"
+									id="btnContact"
 								>
-									Toggle first element
+									Here !
 								</a>
 								<div className="row mt-3">
 									<div
 										className="collapse multi-collapse"
 										id="multiCollapseExample1"
 									>
-										<div className="card card-body">
-											Some placeholder content for the first collapse component
-											of this multi-collapse example. This panel is hidden by
-											default but revealed when the user activates the relevant
-											trigger.
+										<div className="card card-body" style={{ color: "black" }}>
+											<p>
+												<span
+													className="material-symbols-outlined"
+													id="contactIcon"
+												>
+													call
+												</span>
+												+601111263463
+											</p>
+											<p>
+												<span class="material-symbols-outlined">mail</span>{" "}
+												piz230601@gmail.com
+											</p>
 										</div>
 									</div>
 								</div>
