@@ -1,0 +1,329 @@
+$content-width: 1000px;
+$breakpoint: 799px;
+$nav-height: 70px;
+$nav-background: #fff;
+$nav-font-color: #0c0c0c;
+$link-hover-color: #f8b500;
+
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+body {
+	height: 100vh;
+	font-family: "Poppins";
+}
+
+.intro {
+	img {
+		height: 92vh;
+		width: min-content;
+	}
+}
+
+.navigation {
+	height: $nav-height;
+	background: $nav-background;
+	margin-bottom: 10px;
+}
+
+.nav-container {
+	max-width: $content-width;
+	margin: 0 auto;
+}
+
+.brand {
+	position: absolute;
+	padding-left: 20px;
+	float: left;
+	line-height: $nav-height;
+	text-transform: uppercase;
+	font-size: 1.4em;
+
+	a,
+	a:visited {
+		color: $nav-font-color;
+		text-decoration: none;
+	}
+}
+
+nav {
+	float: right;
+	background-color: transparent;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			float: left;
+			position: relative;
+			a {
+				display: block;
+				padding: 10px 20px 0 20px;
+				line-height: 50px;
+				background: $nav-background;
+				color: $nav-font-color;
+				text-decoration: none;
+				&:hover {
+					color: black;
+				}
+
+				&::before {
+					transition: 300ms;
+					height: 5px;
+					content: "";
+					position: absolute;
+					background-color: $link-hover-color;
+					width: 0%;
+					bottom: 0px;
+				}
+
+				&:hover::before {
+					width: 70%;
+				}
+				&:not(:only-child):after {
+					padding-left: 4px;
+					content: " ▾";
+				}
+			} // Dropdown list
+			ul li {
+				min-width: 190px;
+				a {
+					padding: 15px;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+
+.nav-dropdown {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-mobile {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: $nav-background;
+	height: $nav-height;
+	width: $nav-height;
+}
+
+@media only screen and (max-width: $breakpoint) {
+	.nav-mobile {
+		display: block;
+	}
+	nav {
+		width: 100%;
+		padding: $nav-height 0 15px;
+		ul {
+			display: none;
+
+			li {
+				float: none;
+
+				a {
+					padding: 15px;
+					line-height: 20px;
+
+					&:hover::before {
+						width: 20%;
+					}
+				}
+				ul li a {
+					padding-left: 30px;
+				}
+			}
+		}
+	}
+	.nav-dropdown {
+		position: static;
+	}
+}
+
+#nav-toggle {
+	position: absolute;
+	left: 18px;
+	top: 22px;
+	cursor: pointer;
+	padding: 10px 35px 16px 0px;
+	span,
+	span:before,
+	span:after {
+		cursor: pointer;
+		border-radius: 1px;
+		height: 5px;
+		width: 35px;
+		background: $link-hover-color;
+		position: absolute;
+		display: block;
+		content: "";
+		transition: all 300ms ease-in-out;
+	}
+	span:before {
+		top: -10px;
+	}
+	span:after {
+		bottom: -10px;
+	}
+	&.active span {
+		background-color: transparent;
+		&:before,
+		&:after {
+			top: 0;
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+@media screen and (min-width: $breakpoint) {
+	.nav-list {
+		display: block !important;
+	}
+}
+
+#banner {
+	animation: fade-backward 1s ease 0s 1 alternate none;
+	filter: blur(0.7px);
+	object-fit: cover;
+	max-width: 100%;
+	height: 100%;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#pfp {
+	border-radius: 15px;
+}
+
+#introduction {
+	text-align: left;
+	text-align: justify;
+	margin: 10px;
+	padding: 10px;
+}
+
+@keyframes fade-backward {
+	0% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@media (min-width: 768px) {
+	#introduction {
+		font-size: 21px;
+	}
+}
+
+@media (max-width: 767px) {
+	#introduction {
+		font-size: 16px;
+	}
+
+	#pfp {
+		height: 330px;
+		width: 370px;
+	}
+
+	#banner {
+		height: 120%;
+	}
+}
+
+@media (max-width: 375px) {
+	#pfp {
+		height: 320px;
+		width: 350px;
+	}
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+	filter: invert(100%);
+}
+
+.carousel-caption p {
+	color: rgb(0, 0, 0);
+}
+.carousel-caption h5 {
+	color: rgb(0, 0, 0);
+}
+
+#btnSport {
+	p {
+		margin-top: 20px;
+		float: left;
+		color: white;
+		text-transform: uppercase;
+		font-size: 35px;
+	}
+	font-size: 28px;
+	transition: all 0.2s ease-in-out;
+	border-radius: 15px;
+	height: 100px;
+	width: 250px;
+	background: url("./img/tennisWallpaper.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#btnSport:hover {
+	transform: scale(1.2);
+}
+
+#btnEducation {
+	p {
+		margin-top: 20px;
+		color: white;
+		text-transform: uppercase;
+		font-size: 35px;
+	}
+
+	font-size: 28px;
+	transition: all 0.2s ease-in-out;
+	border-radius: 15px;
+	height: 100px;
+	width: 250px;
+	background: url("./img/study.JPG");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#btnEducation:hover {
+	transform: scale(1.2);
+}
+
+#btnProjects {
+	p {
+		margin-top: 20px;
+		color: white;
+		text-transform: uppercase;
+		font-size: 35px;
+	}
+
+	font-size: 28px;
+	transition: all 0.2s ease-in-out;
+	border-radius: 15px;
+	height: 100px;
+	width: 250px;
+	background: url("./img/bgProjects.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#btnProjects:hover {
+	transform: scale(1.2);
+}
