@@ -1,4 +1,5 @@
 import React from "react";
+import { Contact } from "./Contact";
 import Exp from "./Exp";
 import intro from "./img/intro.JPG";
 import Intro from "./Intro";
@@ -23,6 +24,7 @@ export default function Main() {
 			<Intro />
 			<Learning />
 			<Exp />
+			<Contact />
 		</>
 	);
 }
