@@ -10,7 +10,7 @@ import dbHost from "./img/dbHost.png";
 export default function Intro() {
 	return (
 		<>
-			<div className="container container-sm mt-5">
+			<div className="container container-sm mt-5" id="intro">
 				<h2>INTRODUCTION</h2>
 				<div className="row p-3">
 					<div className="col-lg-6 p-3">
@@ -31,7 +31,7 @@ export default function Intro() {
 						</p>
 					</div>
 				</div>
-				<h2>What I Am Good At?</h2>
+				<h3 style={{textAlign: "left",margin:"10px 30px 0"}}>What I Am Good At?</h3>
 				<div className="row p-3">
 					<div className="col-lg-6">
 						<p id="introduction">

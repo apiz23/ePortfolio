@@ -29,7 +29,7 @@ export default function Exp() {
 
 	return (
 		<>
-			<div className="container container-sm mt-5">
+			<div className="container container-sm mt-5" id="exp">
 				<h2>Experience and Achievement</h2>
 				<div className="row my-5">
 					<div className="col col-md-3.5 m-3">

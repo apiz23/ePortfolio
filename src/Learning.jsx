@@ -5,7 +5,7 @@ import uthm from "./img/uthm.jpeg";
 export default function Learning() {
 	return (
 		<>
-			<div className="container container-sm mt-5">
+			<div className="container container-sm mt-5" id="learning">
 				<h2>My Learning Journey</h2>
 				<div className="row p-3">
 					<div className="col-md-6 p-2">

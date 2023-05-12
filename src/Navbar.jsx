@@ -16,16 +16,16 @@ export default function Navbar() {
 						</div>
 						<ul class="nav-list">
 							<li>
-								<a href="#!">Who Am I?</a>
+								<a href="#intro">Who Am I?</a>
 							</li>
 							<li>
-								<a href="#!">Education</a>
+								<a href="#learning">Education</a>
 							</li>
 							<li>
-								<a href="#!">Experience & Achivement</a>
+								<a href="#exp">Experience & Achivement</a>
 							</li>
 							<li>
-								<a href="#!">Contact</a>
+								<a href="#contact">Contact</a>
 							</li>
 						</ul>
 					</nav>

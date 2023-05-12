@@ -3,18 +3,18 @@ import React from "react";
 export const Contact = () => {
 	return (
 		<>
-			<div className="container container-sm mt-5">
+			<div className="container container-sm mt-5" id="contact">
 				<div className="row d-flex justify-content-center mx-auto p-3">
 					<div className="card text-bg-dark m-3" id="cardContact">
 						<div className="card-header">Header</div>
 						<div className="card-body">
 							<h5 className="card-title">How to get Contact with me?</h5>
 							<div
-								class="alert alert-warning alert-dismissible fade show"
+								className="alert alert-warning alert-dismissible fade show mt-3"
 								role="alert"
 							>
 								<strong>Click Button below</strong>
-								<span class="material-symbols-outlined" id="arrowDown">
+								<span className="material-symbols-outlined" id="arrowDown">
 									keyboard_double_arrow_down
 								</span>
 
@@ -27,7 +27,7 @@ export const Contact = () => {
 							</div>
 							<p className="card-text">
 								<a
-									className="btn btn-primary"
+									className="btn btn-primary mt-3"
 									data-bs-toggle="collapse"
 									href="#multiCollapseExample1"
 									role="button"
