@@ -31,20 +31,25 @@ export default function Intro() {
 						</p>
 					</div>
 				</div>
-				<h3 style={{textAlign: "left",margin:"10px 30px 0"}}>What I Am Good At?</h3>
+				<h3 id="whatIam" style={{ textAlign: "left", margin: "10px 30px 0" }}>
+					What I Am Good At?
+					
+				</h3>
 				<div className="row p-3">
 					<div className="col-lg-6">
 						<p id="introduction">
-							Hello everyone, I'm Muhammad Hafizuddin Bin Abdul Hamid, and I'm
-							excited to share my ePortfolio with you. My hometown are in Pagoh
-							which a small town in Muar district located in state of Johor
-							Darul Takzim and right now I am currently studying at Universiti
-							Tun Hussein Onn Malaysia. I love to learn and try new things,
-							which has led me to pursue many different interests especially in
-							Computer and Mathematics. I'm highly motivated and passionate
-							about continuous learning and self-improvement, and I believe that
-							staying open-minded is essential for personal and professional
-							growth.
+							As someone who is passionate about coding, critical thinking, and
+							the statistical aspects of mathematics, I have honed my
+							programming skills over the years. This has given me the
+							confidence to take on projects with ease and to utilize a range of
+							computer literacy skills which are: 
+							<ul class="list-group list-group-flush mt-3">
+								<li class="list-group-item">React,Bootstrap Framework</li>
+								<li class="list-group-item">Web Development</li>
+								<li class="list-group-item">Object Oriented Programming</li>
+								<li class="list-group-item">Data Visualization</li>
+								<li class="list-group-item">Database & Hosting</li>
+							</ul>
 						</p>
 					</div>
 					<div className="col-lg-6 p-3">

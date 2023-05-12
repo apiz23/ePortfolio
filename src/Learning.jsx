@@ -12,7 +12,7 @@ export default function Learning() {
 						<div className="card">
 							<img src={tgb} className="card-img-top" alt="..." />
 							<div className="card-body">
-								<h3 className="card-title mb-3">High School</h3>
+								<h4 className="card-title my-3">Mara Junior Science College Tun Ghafar Baba</h4>
 								<div class="accordion" id="accordionExample">
 									<div class="accordion-item">
 										<h2 class="accordion-header">
@@ -33,18 +33,32 @@ export default function Learning() {
 											data-bs-parent="#accordionExample"
 										>
 											<div class="accordion-body">
-												<strong>
-													This is the first item's accordion body.
-												</strong>{" "}
-												It is shown by default, until the collapse plugin adds
-												the appropriate classes that we use to style each
-												element. These classes control the overall appearance,
-												as well as the showing and hiding via CSS transitions.
-												You can modify any of this with custom CSS or overriding
-												our default variables. It's also worth noting that just
-												about any HTML can go within the{" "}
-												<code>.accordion-body</code>, though the transition does
-												limit overflow.
+												<ol class="list-group list-group-numbered" id="olDesc">
+													<li class="list-group-item d-flex justify-content-between align-items-start">
+														<div class="ms-2 me-auto">
+															<div class="fw-bold">Location</div>
+															Jasin, Melaka
+														</div>
+													</li>
+													<li class="list-group-item d-flex justify-content-between align-items-start">
+														<div class="ms-2 me-auto">
+															<div class="fw-bold">Course</div>
+															Science Stream
+														</div>
+													</li>
+													<li class="list-group-item d-flex justify-content-between align-items-start">
+														<div class="ms-2 me-auto">
+															<div class="fw-bold">Period</div>
+															2019 - 2021 (2 Year)
+														</div>
+													</li>
+													<li class="list-group-item d-flex justify-content-between align-items-start">
+														<div class="ms-2 me-auto">
+															<div class="fw-bold">Academic Programe</div>
+															MRSM Bitara
+														</div>
+													</li>
+												</ol>
 											</div>
 										</div>
 									</div>
@@ -67,18 +81,11 @@ export default function Learning() {
 											data-bs-parent="#accordionExample"
 										>
 											<div class="accordion-body">
-												<strong>
-													This is the third item's accordion body.
-												</strong>{" "}
-												It is hidden by default, until the collapse plugin adds
-												the appropriate classes that we use to style each
-												element. These classes control the overall appearance,
-												as well as the showing and hiding via CSS transitions.
-												You can modify any of this with custom CSS or overriding
-												our default variables. It's also worth noting that just
-												about any HTML can go within the{" "}
-												<code>.accordion-body</code>, though the transition does
-												limit overflow.
+												<ul id="olDesc">
+													<li>SPM: 3A+ 3A 1A- 2B</li>
+													<li>Graduate: First Class (Lower)</li>
+													<li>CGPA: 3.58</li>
+												</ul>
 											</div>
 										</div>
 									</div>
@@ -90,7 +97,7 @@ export default function Learning() {
 						<div class="card">
 							<img src={uthm} className="card-img-top" alt="..." />
 							<div className="card-body">
-								<h3 className="card-title mb-3">University</h3>
+								<h4 className="card-title my-3">Universiti Tun Hussein Onn Malaysia</h4>
 								<div class="accordion" id="accordionExample">
 									<div class="accordion-item">
 										<h2 class="accordion-header">

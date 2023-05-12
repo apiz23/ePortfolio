@@ -29,10 +29,10 @@ export const Contact = () => {
 								<a
 									className="btn btn-primary mt-3"
 									data-bs-toggle="collapse"
-									href="#multiCollapseExample1"
+									href="#multiCollapseExampleContact"
 									role="button"
 									aria-expanded="false"
-									aria-controls="multiCollapseExample1"
+									aria-controls="multiCollapseExampleContact"
 									id="btnContact"
 								>
 									Here !
@@ -40,7 +40,7 @@ export const Contact = () => {
 								<div className="row mt-3">
 									<div
 										className="collapse multi-collapse"
-										id="multiCollapseExample1"
+										id="multiCollapseExampleContact"
 									>
 										<div className="card card-body" style={{ color: "black" }}>
 											<p>

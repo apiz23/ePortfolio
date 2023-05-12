@@ -5,7 +5,8 @@ $nav-background: #fff;
 $nav-font-color: #0c0c0c;
 $link-hover-color: #f8b500;
 
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap|Sofia");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Berkshire Swash|Poiret One|Genos|Mina|Fira Sans Condensed|Courier Prime");
 
 body {
 	height: 100vh;
@@ -20,6 +21,8 @@ body {
 }
 
 .navigation {
+	font-family: Mina;
+	font-size: 120%;
 	height: $nav-height;
 	background: $nav-background;
 	margin-bottom: 10px;
@@ -28,6 +31,19 @@ body {
 .nav-container {
 	max-width: $content-width;
 	margin: 0 auto;
+}
+
+h2 {
+	font-family: Berkshire Swash;
+}
+
+#whatIam {
+	font-family: Mina;
+	color: #444;
+	text-shadow: 1px 0px 1px #ccc, 0px 1px 1px #eee, 2px 1px 1px #ccc,
+		1px 2px 1px #eee, 3px 2px 1px #ccc, 2px 3px 1px #eee, 4px 3px 1px #ccc,
+		3px 4px 1px #eee, 5px 4px 1px #ccc, 4px 5px 1px #eee, 6px 5px 1px #ccc,
+		5px 6px 1px #eee, 7px 6px 1px #ccc;
 }
 
 .brand {
@@ -204,6 +220,7 @@ nav {
 }
 
 #introduction {
+	font-family: Poiret One;
 	text-align: left;
 	text-align: justify;
 	margin: 10px;
@@ -328,21 +345,111 @@ nav {
 	transform: scale(1.2);
 }
 
-#cardContact{
+#cardContact {
 	max-width: 30rem;
 }
 
-#btnContact{
+#btnContact {
 	width: 50%;
 }
 
-#contactIcon{
+#contactIcon {
 	margin: 0px 10px;
 }
 
-.collapseEdu{
+.collapseEdu {
 	outline: 1px solid black;
-	button{
+	button {
 		margin: 0 10px;
 	}
+}
+
+$color_1: #36395a;
+$font-family_1: "JetBrains Mono", monospace;
+$background-color_1: #fcfcfd;
+
+#btnSport,
+#btnEducation,
+#btnProjects {
+	align-items: center;
+	appearance: none;
+	background-color: $background-color_1;
+	border-radius: 10px;
+	border-width: 0;
+	box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+		rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+	box-sizing: border-box;
+	color: $color_1;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: $font-family_1;
+	justify-content: center;
+	line-height: 1;
+	list-style: none;
+	overflow: hidden;
+	padding-left: 16px;
+	padding-right: 16px;
+	position: relative;
+	text-align: left;
+	text-decoration: none;
+	transition: box-shadow 0.15s, transform 0.15s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	white-space: nowrap;
+	will-change: box-shadow, transform;
+	font-size: 18px;
+	&:focus {
+		box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+			rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+	}
+	&:hover {
+		box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+			rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+		transform: translateY(-5px);
+	}
+	&:active {
+		box-shadow: #d6d6e7 0 3px 7px inset;
+		transform: translateY(5px);
+	}
+}
+
+$color_1: #422800;
+$background-color_1: #fbeee0;
+$background-color_2: #fff;
+
+#eduBtn {
+	background-color: $background-color_1;
+	border: 2px solid #422800;
+	border-radius: 30px;
+	box-shadow: #422800 4px 4px 0 0;
+	color: $color_1;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 18px;
+	padding: 0 18px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	&:hover {
+		background-color: $background-color_2;
+	}
+	&:active {
+		box-shadow: #422800 2px 2px 0 0;
+		transform: translate(2px, 2px);
+	}
+}
+@media (min-width: 768px) {
+	#eduBtn {
+		min-width: 120px;
+		padding: 0 25px;
+	}
+}
+
+#olDesc{
+	text-align: left;
 }
