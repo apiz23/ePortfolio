@@ -9,6 +9,7 @@ $link-hover-color: #f8b500;
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Berkshire Swash|Poiret One|Genos|Mina|Fira Sans Condensed|Courier Prime");
 
 body {
+	width: fit-content;
 	height: 100vh;
 	font-family: "Mina";
 }
@@ -274,7 +275,7 @@ nav {
 
 @media (max-width: 375px) {
 	#pfp {
-		height: 300px;
+		height: 280px;
 		width: 340px;
 	}
 }
