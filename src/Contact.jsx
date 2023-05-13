@@ -6,7 +6,9 @@ export const Contact = () => {
 			<div className="container container-sm mt-5" id="contact">
 				<div className="row d-flex justify-content-center mx-auto p-3">
 					<div className="card text-bg-dark m-3" id="cardContact">
-						<div className="card-header">Header</div>
+						<div className="card-header">
+							<h4>Contact</h4>
+						</div>
 						<div className="card-body">
 							<h5 className="card-title">How to get Contact with me?</h5>
 							<div

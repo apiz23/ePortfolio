@@ -10,9 +10,9 @@ import dbHost from "./img/dbHost.png";
 export default function Intro() {
 	return (
 		<>
-			<div className="container container-sm mt-5" id="intro">
+			<div className="container container-sm mt-5 p-3">
 				<h2>INTRODUCTION</h2>
-				<div className="row p-3">
+				<div className="row p-3" id="intro">
 					<div className="col-lg-6 p-3">
 						<img src={profilePic} id="pfp" className="img-fluid" alt="Avatar" />
 					</div>
@@ -31,11 +31,10 @@ export default function Intro() {
 						</p>
 					</div>
 				</div>
-				<h3 id="whatIam" style={{ textAlign: "left", margin: "10px 30px 0" }}>
+				<div className="row p-3" id="whatIam">
+				<h3 id="whatIamTitle" style={{ textAlign: "left", margin: "10px 30px 0" }}>
 					What I Am Good At?
-					
 				</h3>
-				<div className="row p-3">
 					<div className="col-lg-6">
 						<p id="introduction">
 							As someone who is passionate about coding, critical thinking, and

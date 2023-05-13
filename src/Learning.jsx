@@ -12,7 +12,9 @@ export default function Learning() {
 						<div className="card">
 							<img src={tgb} className="card-img-top" alt="..." />
 							<div className="card-body">
-								<h4 className="card-title my-3">Mara Junior Science College Tun Ghafar Baba</h4>
+								<h4 className="card-title my-3">
+									Mara Junior Science College Tun Ghafar Baba
+								</h4>
 								<div class="accordion" id="accordionExample">
 									<div class="accordion-item">
 										<h2 class="accordion-header">
@@ -72,7 +74,7 @@ export default function Learning() {
 												aria-expanded="false"
 												aria-controls="collapseTwo"
 											>
-												Grade & Accomplishment
+												Grade
 											</button>
 										</h2>
 										<div
@@ -97,7 +99,9 @@ export default function Learning() {
 						<div class="card">
 							<img src={uthm} className="card-img-top" alt="..." />
 							<div className="card-body">
-								<h4 className="card-title my-3">Universiti Tun Hussein Onn Malaysia</h4>
+								<h4 className="card-title my-3">
+									Universiti Tun Hussein Onn Malaysia
+								</h4>
 								<div class="accordion" id="accordionExample">
 									<div class="accordion-item">
 										<h2 class="accordion-header">
@@ -118,18 +122,26 @@ export default function Learning() {
 											data-bs-parent="#accordionExample"
 										>
 											<div class="accordion-body">
-												<strong>
-													This is the first item's accordion body.
-												</strong>{" "}
-												It is shown by default, until the collapse plugin adds
-												the appropriate classes that we use to style each
-												element. These classes control the overall appearance,
-												as well as the showing and hiding via CSS transitions.
-												You can modify any of this with custom CSS or overriding
-												our default variables. It's also worth noting that just
-												about any HTML can go within the{" "}
-												<code>.accordion-body</code>, though the transition does
-												limit overflow.
+												<ol class="list-group list-group-numbered" id="olDesc">
+													<li class="list-group-item d-flex justify-content-between align-items-start">
+														<div class="ms-2 me-auto">
+															<div class="fw-bold">Location</div>
+															Pagoh, Muar
+														</div>
+													</li>
+													<li class="list-group-item d-flex justify-content-between align-items-start">
+														<div class="ms-2 me-auto">
+															<div class="fw-bold">Course</div>
+															Diploma Information Technology
+														</div>
+													</li>
+													<li class="list-group-item d-flex justify-content-between align-items-start">
+														<div class="ms-2 me-auto">
+															<div class="fw-bold">Period</div>
+															2021 - 2024 (2 Year)
+														</div>
+													</li>
+												</ol>
 											</div>
 										</div>
 									</div>
@@ -143,7 +155,7 @@ export default function Learning() {
 												aria-expanded="false"
 												aria-controls="collapseFour"
 											>
-												Grade & Accomplishment
+												Grade
 											</button>
 										</h2>
 										<div
@@ -152,18 +164,86 @@ export default function Learning() {
 											data-bs-parent="#accordionExample"
 										>
 											<div class="accordion-body">
-												<strong>
-													This is the third item's accordion body.
-												</strong>{" "}
-												It is hidden by default, until the collapse plugin adds
-												the appropriate classes that we use to style each
-												element. These classes control the overall appearance,
-												as well as the showing and hiding via CSS transitions.
-												You can modify any of this with custom CSS or overriding
-												our default variables. It's also worth noting that just
-												about any HTML can go within the{" "}
-												<code>.accordion-body</code>, though the transition does
-												limit overflow.
+												<div class="row">
+													<div class="col-4">
+														<div
+															class="list-group"
+															id="list-tab"
+															role="tablist"
+														>
+															<a
+																class="list-group-item list-group-item-action active"
+																id="list-home-list"
+																data-bs-toggle="list"
+																href="#list-home"
+																role="tab"
+																aria-controls="list-home"
+															>
+																CPA
+															</a>
+															<a
+																class="list-group-item list-group-item-action"
+																id="list-profile-list"
+																data-bs-toggle="list"
+																href="#list-profile"
+																role="tab"
+																aria-controls="list-profile"
+															>
+																GPA's
+															</a>
+															<a
+																class="list-group-item list-group-item-action"
+																id="list-messages-list"
+																data-bs-toggle="list"
+																href="#list-messages"
+																role="tab"
+																aria-controls="list-messages"
+															>
+																Subject
+															</a>
+														</div>
+													</div>
+													<div class="col-8">
+														<div class="tab-content" id="nav-tabContent">
+															<div
+																class="tab-pane fade show active"
+																id="list-home"
+																role="tabpanel"
+																aria-labelledby="list-home-list"
+															>
+																3.84
+															</div>
+															<div
+																class="tab-pane fade"
+																id="list-profile"
+																role="tabpanel"
+																aria-labelledby="list-profile-list"
+															>
+																<ul id="olDesc">
+																	<li>Sem 0 21/22: 3.71</li>
+																	<li>Sem 1 21/22: 3.87</li>
+																	<li>Sem 2 21/22: 3.83</li>
+																	<li>Sem 1 22/23: 3.88</li>
+																</ul>
+															</div>
+															<div
+																class="tab-pane fade"
+																id="list-messages"
+																role="tabpanel"
+																aria-labelledby="list-messages-list"
+															>
+																<ul id="olDesc">
+																	<li>Object Oriented Programming</li>
+																	<li>Web Development</li>
+																	<li>Mobile Computing</li>
+																	<li>Principle of Programming</li>
+																	<li>System Analysis & Design</li>
+																	<li>Database</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>

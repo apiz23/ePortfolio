@@ -10,7 +10,12 @@ $link-hover-color: #f8b500;
 
 body {
 	height: 100vh;
-	font-family: "Poppins";
+	font-family: "Mina";
+}
+
+#intro{
+	
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 
 .intro {
@@ -37,7 +42,13 @@ h2 {
 	font-family: Berkshire Swash;
 }
 
-#whatIam {
+#whatIam{
+	margin-top: 10px;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+#whatIamTitle {
+	
 	font-family: Mina;
 	color: #444;
 	text-shadow: 1px 0px 1px #ccc, 0px 1px 1px #eee, 2px 1px 1px #ccc,
@@ -450,6 +461,23 @@ $background-color_2: #fff;
 	}
 }
 
-#olDesc{
+#olDesc {
 	text-align: left;
+}
+
+#carouselMCSlide {
+	width: 350px;
+}
+
+#textProjects {
+	font-size: 120%;
+}
+
+.footerText {
+	font-style: initial;
+}
+
+#learning{
+	padding: 10px;
+	box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
