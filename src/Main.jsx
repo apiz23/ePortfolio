@@ -17,7 +17,7 @@ export default function Main() {
 					<img
 						src={intro}
 						id="banner"
-						className="rounded"
+						className="img-fluid rounded"
 						alt="Responsive image"
 					/>
 				</div>
