@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import tennis from "./img/tennis.jpg";
-import tennis1 from "./img/tennis1.jpg";
-import tennis2 from "./img/tennis2.jpg";
-import tennis3 from "./img/tennis3.jpg";
 import projectCuti2 from "./img/projectCuti2.png";
 import tgbAnugerah from "./img/tgb.jpg";
 import sem12223 from "./img/sem1388.png";
