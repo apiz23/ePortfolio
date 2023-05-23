@@ -6,15 +6,15 @@ export default function Navbar() {
 			<section class="navigation">
 				<div class="nav-container">
 					<div class="brand">
-						<a href="#!">Code by: Hafiz</a>
+						<a href="#!">Code by: Hafizu</a>
 					</div>
 					<nav>
 						<div class="nav-mobile">
-							<a id="nav-toggle" href="#!">
+							<a id="nav-toggle" href="/">
 								<span></span>
 							</a>
 						</div>
-						<ul class="nav-list">
+						<ul className="nav-list">
 							<li>
 								<a href="#intro">Who Am I?</a>
 							</li>
