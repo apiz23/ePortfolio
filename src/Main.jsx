@@ -13,7 +13,7 @@ export default function Main() {
 		<>
 			<Navbar />
 			<div className="row p-3">
-				<div className="container container-lg">
+				<div className="container container-lg" id="bannerDiv">
 					<img
 						src={intro}
 						id="banner"
