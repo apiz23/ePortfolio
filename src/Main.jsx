@@ -11,6 +11,7 @@ import Navbar from "./Navbar";
 export default function Main() {
 	return (
 		<>
+			<h1>Azhad</h1>
 			<Navbar />
 			<div className="row p-3">
 				<div className="container container-lg" id="bannerDiv">
