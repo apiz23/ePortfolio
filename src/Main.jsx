@@ -13,20 +13,22 @@ export default function Main() {
 		<>
 			<section className="sec">
 				<Navbar />
-				<div className="row p-3">
-					<div className="container container-lg" id="bannerDiv">
-						<img
-							src={intro}
-							id="banner"
-							className="img-fluid rounded"
-							alt="Responsive image"
-						/>
+				<div className="container">
+					<div className="row p-3">
+						<div className="container container-lg" id="bannerDiv">
+							<img
+								src={intro}
+								id="banner"
+								className="img-fluid rounded"
+								alt="Responsive image"
+							/>
+						</div>
 					</div>
+					<Intro />
+					<Learning />
+					<Exp />
+					<Contact />
 				</div>
-				<Intro />
-				<Learning />
-				<Exp />
-				<Contact />
 				<Footer />
 			</section>
 		</>
