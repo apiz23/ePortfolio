@@ -9,6 +9,7 @@ import js from "./img/JS.png";
 import reactPic from "./img/react.png";
 import cSharp from "./img/cSharp.png";
 import fyp from "./img/fypDemo.png";
+import fyp1 from "./img/Home.png"
 import mb1 from "./img/mb1.png";
 import mb2 from "./img/mb2.png";
 import mb3 from "./img/mb3.png";
@@ -20,7 +21,7 @@ export default function Exp() {
 	const [selectedCard, setSelectedCard] = useState("");
 	const pageProject = [
 		{
-			imgSrc: fyp,
+			imgSrc: fyp1,
 			title: "Final Year Project",
 			desc: "Making a Booking system for UTHM focusing in space and equipment",
 		},

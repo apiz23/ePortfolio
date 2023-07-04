@@ -11,22 +11,24 @@ import Navbar from "./Navbar";
 export default function Main() {
 	return (
 		<>
-			<Navbar />
-			<div className="row p-3">
-				<div className="container container-lg" id="bannerDiv">
-					<img
-						src={intro}
-						id="banner"
-						className="img-fluid rounded"
-						alt="Responsive image"
-					/>
+			<section className="sec">
+				<Navbar />
+				<div className="row p-3">
+					<div className="container container-lg" id="bannerDiv">
+						<img
+							src={intro}
+							id="banner"
+							className="img-fluid rounded"
+							alt="Responsive image"
+						/>
+					</div>
 				</div>
-			</div>
-			<Intro />
-			<Learning />
-			<Exp />
-			<Contact />
-			<Footer />
+				<Intro />
+				<Learning />
+				<Exp />
+				<Contact />
+				<Footer />
+			</section>
 		</>
 	);
 }
