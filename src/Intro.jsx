@@ -11,8 +11,8 @@ export default function Intro() {
 	return (
 		<>
 			<div className="container container-sm mt-5 p-3">
-				<h2>INTRODUCTION</h2>
-				<div className="row p-3" id="intro">
+				<h2 className="display-4 text-light">INTRODUCTION</h2>
+				<div className="row p-3 bg-dark text-light" id="intro">
 					<div className="col-lg-6 p-3">
 						<img src={profilePic} id="pfp" className="img-fluid" alt="Avatar" />
 					</div>
@@ -31,17 +31,20 @@ export default function Intro() {
 						</p>
 					</div>
 				</div>
-				<div className="row p-3" id="whatIam">
-				<h3 id="whatIamTitle" style={{ textAlign: "left", margin: "10px 30px 0" }}>
-					What I Am Good At?
-				</h3>
-					<div className="col-lg-6">
+				<div className="row p-3 bg-dark text-light" id="whatIam">
+					<h3
+						id="whatIamTitle"
+						style={{ textAlign: "left", margin: "10px 30px 0" }}
+					>
+						What I Am Good At?
+					</h3>
+					<div className="col-lg-6 ">
 						<p id="introduction">
 							As someone who is passionate about coding, critical thinking, and
 							the statistical aspects of mathematics, I have honed my
 							programming skills over the years. This has given me the
 							confidence to take on projects with ease and to utilize a range of
-							computer literacy skills which are: 
+							computer literacy skills which are:
 							<ul class="list-group list-group-flush mt-3">
 								<li class="list-group-item">React,Bootstrap Framework</li>
 								<li class="list-group-item">Web Development</li>

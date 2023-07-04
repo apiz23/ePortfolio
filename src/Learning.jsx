@@ -5,8 +5,8 @@ import uthm from "./img/uthm.jpeg";
 export default function Learning() {
 	return (
 		<>
-			<div className="container container-sm mt-5" id="learning" style={{outline:"none"}}>
-				<h2>My Learning Journey</h2>
+			<div className="container container-sm mt-5 bg-dark" id="learning" style={{outline:"none"}}>
+				<h2 className="display-4 text-light">My Learning Journey</h2>
 				<div className="row p-3">
 					<div className="col-md-6 p-2">
 						<div className="card">

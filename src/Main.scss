@@ -1,7 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Inter|Open+Sans:400italic,700italic,400,700);
+
+$roboto-slab: "Roboto Slab", serif;
+$open-sans: "Open Sans", sans-serif;
+$inter: "inter", sans-serif;
+
 $content-width: 1000px;
 $breakpoint: 799px;
 $nav-height: 70px;
-$nav-background: rgb(83, 120, 194);
+$nav-background: rgb(25, 57, 121);
 $nav-font-color: #0c0c0c;
 $link-hover-color: #f8b500;
 
@@ -9,7 +15,10 @@ html,
 body {
 	width: 100%;
 	height: 100%;
-	font-family: "Mina";
+}
+
+* {
+	font-family: $inter;
 }
 
 #intro {
@@ -32,7 +41,7 @@ body {
 }
 
 .navigation {
-	font-family: Mina;
+	font-family: $inter;
 	font-size: 120%;
 	height: $nav-height;
 	background: $nav-background;
@@ -51,7 +60,7 @@ body {
 }
 
 h2 {
-	font-family: Fira Sans;
+	font-family: $inter;
 }
 
 #whatIam {
@@ -61,12 +70,8 @@ h2 {
 }
 
 #whatIamTitle {
-	font-family: Mina;
-	color: #444;
-	text-shadow: 1px 0px 1px #ccc, 0px 1px 1px #eee, 2px 1px 1px #ccc,
-		1px 2px 1px #eee, 3px 2px 1px #ccc, 2px 3px 1px #eee, 4px 3px 1px #ccc,
-		3px 4px 1px #eee, 5px 4px 1px #ccc, 4px 5px 1px #eee, 6px 5px 1px #ccc,
-		5px 6px 1px #eee, 7px 6px 1px #ccc;
+	font-family: $inter;
+	color: rgb(255, 255, 255);
 }
 
 .container,
@@ -107,7 +112,7 @@ nav {
 				color: $nav-font-color;
 				text-decoration: none;
 				&:hover {
-					color: black;
+					color: rgb(158, 253, 213);
 				}
 
 				&::before {
@@ -248,7 +253,7 @@ nav {
 }
 
 #introduction {
-	font-family: Fira Sans Condensed;
+	font-family: $inter;
 	text-align: left;
 	text-align: justify;
 	margin: 10px;
@@ -381,7 +386,7 @@ nav {
 }
 
 .title-contact {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: $inter;
 }
 
 #btnContact {
@@ -400,7 +405,7 @@ nav {
 }
 
 $color_1: #36395a;
-$font-family_1: "JetBrains Mono", monospace;
+$font-family_1:$inter;
 $background-color_1: #fcfcfd;
 
 #btnSport,
@@ -417,7 +422,7 @@ $background-color_1: #fcfcfd;
 	color: $color_1;
 	cursor: pointer;
 	display: inline-flex;
-	font-family: $font-family_1;
+	font-family: $inter;
 	justify-content: center;
 	line-height: 1;
 	list-style: none;
@@ -505,4 +510,12 @@ $background-color_2: #fff;
 	padding: 10px;
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
 		rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.footerCol {
+	a {
+		:hover {
+			color: rgb(96, 96, 207);
+		}
+	}
 }

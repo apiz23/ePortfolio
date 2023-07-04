@@ -3,8 +3,10 @@ export default function Navbar() {
 		<>
 			<section className="navigation">
 				<div class="nav-container">
-					<div class="brand">
-						<a href="#!">Code by: Hafizu</a>
+					<div className="brand text-light">
+						<a className="text-light " href="#!">
+							Code by: Hafizu
+						</a>
 					</div>
 					<nav>
 						<div class="nav-mobile">

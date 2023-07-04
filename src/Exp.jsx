@@ -39,7 +39,7 @@ export default function Exp() {
 	return (
 		<>
 			<div className="container container-sm mt-5" id="exp">
-				<h2>Experience and Achievement</h2>
+				<h2 className="display-4 text-light">Experience and Achievement</h2>
 				<div className="row my-5">
 					<div className="col col-md-3.5 m-3">
 						<button
@@ -284,16 +284,16 @@ export default function Exp() {
 				)}
 
 				{selectedCard === "projects" && (
-					<div className="row g-0">
+					<div className="row g-0 bg-dark">
 						<div className="card-body">
 							{pageProject.map((page, index) => (
 								<div className="card my-3" style={{ border: "none" }}>
 									<div
-										className="card p-2"
+										className="card p-2 bg-dark"
 										key={index}
 										style={{ border: "none" }}
 									>
-										<div className="card-body">
+										<div className="card-body bg-dark">
 											<img className="img-fluid rounded p-3" src={page.imgSrc} alt="" />
 											<h3 className="card-title">{page.title}</h3>
 											<ul className="list-group">
@@ -306,7 +306,7 @@ export default function Exp() {
 								</div>
 							))}
 						</div>
-						<div class="card mb-3 mt-3" style={{ border: "none" }}>
+						<div class="card mb-3 mt-3 bg-dark text-light" style={{ border: "none" }}>
 							<div class="row g-0">
 								<div class="col-md-5 mx-auto">
 									<div
