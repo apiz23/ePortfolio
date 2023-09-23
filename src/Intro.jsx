@@ -1,4 +1,3 @@
-import React from "react";
 import profilePic from "./img/pfp.jpg";
 import dataVis from "./img/Python.png";
 import webDev from "./img/Webdev.png";

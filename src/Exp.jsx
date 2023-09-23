@@ -9,13 +9,13 @@ import js from "./img/JS.png";
 import reactPic from "./img/react.png";
 import cSharp from "./img/cSharp.png";
 import fyp from "./img/fypDemo.png";
-import fyp1 from "./img/Home.png"
+import fyp1 from "./img/Home.png";
 import mb1 from "./img/mb1.png";
 import mb2 from "./img/mb2.png";
 import mb3 from "./img/mb3.png";
 import mb4 from "./img/mb4.png";
 import mb5 from "./img/mb5.png";
-import mc from "./img/mc.jpg"
+import mc from "./img/mc.jpg";
 
 export default function Exp() {
 	const [selectedCard, setSelectedCard] = useState("");
@@ -24,11 +24,13 @@ export default function Exp() {
 			imgSrc: fyp1,
 			title: "Final Year Project",
 			desc: "Making a Booking system for UTHM focusing in space and equipment",
+			link: "https://space-equipment.vercel.app/",
 		},
 		{
 			imgSrc: projectCuti2,
 			title: "Project Cuti2",
 			desc: "Personal project that I have been working on during my semester break",
+			link: "https://project-cuti2.netlify.app/pointe_calc/index.html",
 		},
 	];
 
@@ -294,11 +296,22 @@ export default function Exp() {
 										style={{ border: "none" }}
 									>
 										<div className="card-body bg-dark">
-											<img className="img-fluid rounded p-3" src={page.imgSrc} alt="" />
+											<img
+												className="img-fluid rounded p-3"
+												src={page.imgSrc}
+												alt=""
+											/>
 											<h3 className="card-title">{page.title}</h3>
 											<ul className="list-group">
 												<li className="list-group-item" id="textProjects">
 													{page.desc}
+												</li>
+												<li className="list-group-item" id="textProjects">
+													<a href={page.link} target="_blank">
+														<button className="btn btn-warning">
+															Redirect to page
+														</button>
+													</a>
 												</li>
 											</ul>
 										</div>
@@ -306,12 +319,16 @@ export default function Exp() {
 								</div>
 							))}
 						</div>
-						<div class="card mb-3 mt-3 bg-dark text-light" style={{ border: "none" }}>
+						<div
+							class="card mb-3 mt-3 bg-dark text-light"
+							style={{ border: "none" }}
+						>
 							<div class="row g-0">
 								<div class="col-md-5 mx-auto">
 									<div
 										id="carouselMCSlide"
-										className="carousel slide mx-auto" style={{width: "350px"}}
+										className="carousel slide mx-auto"
+										style={{ width: "350px" }}
 										data-bs-ride="carousel"
 									>
 										<div class="carousel-inner">
@@ -358,7 +375,7 @@ export default function Exp() {
 									</div>
 								</div>
 								<div class="col-md-7">
-									<div class="card-body p-3" style={{width: "fit-content"}}>
+									<div class="card-body p-3" style={{ width: "fit-content" }}>
 										<h3 class="card-title">Perfect Fitness</h3>
 										<p class="card-text" id="textProjects">
 											Perfect Fitness is an app that was developed by my group

@@ -1,12 +1,15 @@
-import React from "react";
 import tgb from "./img/mrsm_tgb.jpg";
 import uthm from "./img/uthm.jpeg";
 
 export default function Learning() {
 	return (
 		<>
-			<div className="container container-sm mt-5 bg-dark" id="learning" style={{outline:"none"}}>
-				<h2 className="display-4 text-light">My Learning Journey</h2>
+			<h2 className="display-4 text-light">My Learning Journey</h2>
+			<div
+				className="container container-sm mt-5 bg-dark"
+				id="learning"
+				style={{ outline: "none" }}
+			>
 				<div className="row p-3">
 					<div className="col-md-6 p-2">
 						<div className="card">
