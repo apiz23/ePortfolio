@@ -14,7 +14,7 @@ export default function Main() {
 				<Navbar />
 				<div className="container">
 					<div className="row p-3">
-						<div className="container container-lg" id="bannerDiv">
+						<div className="col-md-12 container-xl" id="bannerDiv">
 							<img
 								src={intro}
 								id="banner"

@@ -29,7 +29,8 @@ export default function Exp() {
 		{
 			imgSrc: projectCuti2,
 			title: "Project Cuti2",
-			desc: "Personal project that I have been working on during my semester break",
+			desc:
+				"Personal project that I have been working on during my semester break",
 			link: "https://project-cuti2.netlify.app/pointe_calc/index.html",
 		},
 	];
@@ -92,10 +93,7 @@ export default function Exp() {
 										Tennis Open Tournament (State Level)
 									</h2>
 									<p className="card-text mt-3">
-										<ol
-											class="list-group list-group-numbered mx-auto"
-											id="olDesc"
-										>
+										<ol class="list-group list-group-numbered mx-auto" id="olDesc">
 											<li class="list-group-item d-flex justify-content-between align-items-start">
 												<div class="ms-2 me-auto">
 													<div class="fw-bold">Location</div>
@@ -176,18 +174,12 @@ export default function Exp() {
 								</div>
 							</div>
 							<div className="row">
-								<div
-									className="collapse multi-collapse m-2"
-									id="multiCollapseExample1"
-								>
+								<div className="collapse multi-collapse m-2" id="multiCollapseExample1">
 									<img className="img-fluid rounded" src={tgbAnugerah} alt="" />
 									<h2 className="m-3">Dean's award certificate (MRSM)</h2>
 								</div>
 
-								<div
-									className="collapse multi-collapse m-2"
-									id="multiCollapseExample2"
-								>
+								<div className="collapse multi-collapse m-2" id="multiCollapseExample2">
 									<div
 										id="carouselExampleInterval"
 										class="carousel slide"
@@ -210,10 +202,7 @@ export default function Exp() {
 											data-bs-target="#carouselExampleInterval"
 											data-bs-slide="prev"
 										>
-											<span
-												class="carousel-control-prev-icon"
-												aria-hidden="true"
-											></span>
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 											<span class="visually-hidden">Previous</span>
 										</button>
 										<button
@@ -222,19 +211,13 @@ export default function Exp() {
 											data-bs-target="#carouselExampleInterval"
 											data-bs-slide="next"
 										>
-											<span
-												class="carousel-control-next-icon"
-												aria-hidden="true"
-											></span>
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
 											<span class="visually-hidden">Next</span>
 										</button>
 									</div>
 									<h2 className="m-3">Dean's award certificate (UTHM)</h2>
 								</div>
-								<div
-									className="collapse multi-collapse m-2"
-									id="multiCollapseExample3"
-								>
+								<div className="collapse multi-collapse m-2" id="multiCollapseExample3">
 									<div
 										id="carouselExampleControlsNoTouching"
 										class="carousel slide"
@@ -257,10 +240,7 @@ export default function Exp() {
 											data-bs-target="#carouselExampleControlsNoTouching"
 											data-bs-slide="prev"
 										>
-											<span
-												class="carousel-control-prev-icon"
-												aria-hidden="true"
-											></span>
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 											<span class="visually-hidden">Previous</span>
 										</button>
 										<button
@@ -269,10 +249,7 @@ export default function Exp() {
 											data-bs-target="#carouselExampleControlsNoTouching"
 											data-bs-slide="next"
 										>
-											<span
-												class="carousel-control-next-icon"
-												aria-hidden="true"
-											></span>
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
 											<span class="visually-hidden">Next</span>
 										</button>
 									</div>
@@ -296,11 +273,7 @@ export default function Exp() {
 										style={{ border: "none" }}
 									>
 										<div className="card-body bg-dark">
-											<img
-												className="img-fluid rounded p-3"
-												src={page.imgSrc}
-												alt=""
-											/>
+											<img className="img-fluid rounded p-3" src={page.imgSrc} alt="" />
 											<h3 className="card-title">{page.title}</h3>
 											<ul className="list-group">
 												<li className="list-group-item" id="textProjects">
@@ -308,9 +281,7 @@ export default function Exp() {
 												</li>
 												<li className="list-group-item" id="textProjects">
 													<a href={page.link} target="_blank">
-														<button className="btn btn-warning">
-															Redirect to page
-														</button>
+														<button className="btn btn-warning">Redirect to page</button>
 													</a>
 												</li>
 											</ul>
@@ -319,12 +290,9 @@ export default function Exp() {
 								</div>
 							))}
 						</div>
-						<div
-							class="card mb-3 mt-3 bg-dark text-light"
-							style={{ border: "none" }}
-						>
+						<div class="card mb-3 mt-3 bg-dark text-light" style={{ border: "none" }}>
 							<div class="row g-0">
-								<div class="col-md-5 mx-auto">
+								<div class="col-lg-5 col-xs-12 mx-auto">
 									<div
 										id="carouselMCSlide"
 										className="carousel slide mx-auto"
@@ -354,10 +322,7 @@ export default function Exp() {
 											data-bs-target="#carouselMCSlide"
 											data-bs-slide="prev"
 										>
-											<span
-												class="carousel-control-prev-icon"
-												aria-hidden="true"
-											></span>
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 											<span class="visually-hidden">Previous</span>
 										</button>
 										<button
@@ -366,10 +331,7 @@ export default function Exp() {
 											data-bs-target="#carouselMCSlide"
 											data-bs-slide="next"
 										>
-											<span
-												class="carousel-control-next-icon"
-												aria-hidden="true"
-											></span>
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
 											<span class="visually-hidden">Next</span>
 										</button>
 									</div>
@@ -378,9 +340,8 @@ export default function Exp() {
 									<div class="card-body p-3" style={{ width: "fit-content" }}>
 										<h3 class="card-title">Perfect Fitness</h3>
 										<p class="card-text" id="textProjects">
-											Perfect Fitness is an app that was developed by my group
-											during our second semester in junior year for our Mobile
-											Computing class.
+											Perfect Fitness is an app that was developed by my group during our
+											second semester in junior year for our Mobile Computing class.
 										</p>
 										<p class="card-text" id="textProjects">
 											Awards: <strong>Runner Up</strong>
