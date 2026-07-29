@@ -6,20 +6,23 @@ import Lenis from "lenis";
 export default function SmoothScroll() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.4,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
+      wheelMultiplier: 1.1,
+      touchMultiplier: 1.2,
+      infinite: false,
     });
 
-    let animId: number;
+    lenis.on("scroll", () => {});
+
     function raf(time: number) {
       lenis.raf(time);
-      animId = requestAnimationFrame(raf);
+      requestAnimationFrame(raf);
     }
-    animId = requestAnimationFrame(raf);
+    requestAnimationFrame(raf);
 
     return () => {
-      cancelAnimationFrame(animId);
       lenis.destroy();
     };
   }, []);

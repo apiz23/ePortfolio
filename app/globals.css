@@ -3,140 +3,76 @@
 @tailwind utilities;
 
 :root {
-  /* Blueprint palette — graphite ink on drafting paper */
-  --paper: 0 0% 98%;
-  --ink: 0 0% 8%;
-  --ink-dim: 0 0% 45%;
-  --grid-line: 0 0% 90%;
-  --redline: 18 86% 41%;
-  --redline-bg: 18 60% 95%;
-  --redline-border: 18 60% 82%;
-  --sheet-bg: 0 0% 4%;
+  --surface: 0 0% 4%;
+  --surface-alt: 0 0% 7%;
+  --ink: 0 0% 95%;
+  --ink-dim: 0 0% 55%;
+  --edge: 0 0% 14%;
+  --lime: 88 70% 52%;
+  --lime-alpha: 88 70% 52% / 0.1;
+  --cyan: 187 80% 55%;
+  --orange: 25 90% 55%;
+  --magenta: 330 65% 52%;
 
-  --background: var(--paper);
+  --background: var(--surface);
   --foreground: var(--ink);
-  --card: var(--paper);
+  --card: var(--surface-alt);
   --card-foreground: var(--ink);
-  --popover: var(--paper);
+  --popover: var(--surface-alt);
   --popover-foreground: var(--ink);
-  --primary: var(--ink);
-  --primary-foreground: var(--paper);
-  --secondary: 0 0% 93%;
+  --primary: var(--lime);
+  --primary-foreground: var(--surface);
+  --secondary: var(--surface-alt);
   --secondary-foreground: var(--ink);
-  --muted: 0 0% 93%;
+  --muted: var(--surface-alt);
   --muted-foreground: var(--ink-dim);
-  --accent: 0 0% 93%;
-  --accent-foreground: var(--ink);
-  --destructive: var(--redline);
-  --destructive-foreground: var(--paper);
-  --border: var(--grid-line);
-  --input: var(--grid-line);
-  --ring: var(--ink);
-  --chart-1: var(--ink);
-  --chart-2: var(--ink-dim);
-  --chart-3: 0 0% 75%;
-  --chart-4: var(--redline);
-  --chart-5: 0 0% 55%;
-  --sidebar: var(--paper);
+  --accent: var(--lime);
+  --accent-foreground: var(--surface);
+  --destructive: var(--orange);
+  --destructive-foreground: var(--surface);
+  --border: var(--edge);
+  --input: var(--edge);
+  --ring: var(--lime);
+  --chart-1: var(--lime);
+  --chart-2: var(--cyan);
+  --chart-3: var(--ink-dim);
+  --chart-4: var(--orange);
+  --chart-5: var(--magenta);
+  --sidebar: var(--surface-alt);
   --sidebar-foreground: var(--ink);
-  --sidebar-primary: var(--ink);
-  --sidebar-primary-foreground: var(--paper);
-  --sidebar-accent: 0 0% 93%;
+  --sidebar-primary: var(--lime);
+  --sidebar-primary-foreground: var(--surface);
+  --sidebar-accent: var(--surface);
   --sidebar-accent-foreground: var(--ink);
-  --sidebar-border: var(--grid-line);
-  --sidebar-ring: var(--ink);
-  --font-sans: var(--font-inter, 'Inter', sans-serif);
-  --font-serif: var(--font-heading, 'Space Grotesk', sans-serif);
-  --font-mono: var(--font-mono, 'IBM Plex Mono', monospace);
-  --radius: 2px;
-  --shadow-2xs: 0px 0px 0px 0px rgba(0,0,0,0.03);
-  --shadow-xs: 0px 0px 0px 0px rgba(0,0,0,0.03);
-  --shadow-sm: 0px 1px 2px -1px rgba(0,0,0,0.05);
-  --shadow: 0px 1px 2px -1px rgba(0,0,0,0.05);
-  --shadow-md: 0px 2px 4px -1px rgba(0,0,0,0.05);
-  --shadow-lg: 0px 4px 6px -1px rgba(0,0,0,0.05);
-  --shadow-xl: 0px 8px 10px -1px rgba(0,0,0,0.05);
-  --shadow-2xl: 0px 0px 0px 0px rgba(0,0,0,0.13);
-  --tracking-normal: normal;
-  --spacing: 0.25rem;
-}
-
-@theme inline {
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
-  --color-popover: hsl(var(--popover));
-  --color-popover-foreground: hsl(var(--popover-foreground));
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
-  --color-destructive: hsl(var(--destructive));
-  --color-destructive-foreground: hsl(var(--destructive-foreground));
-  --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
-  --color-chart-1: hsl(var(--chart-1));
-  --color-chart-2: hsl(var(--chart-2));
-  --color-chart-3: hsl(var(--chart-3));
-  --color-chart-4: hsl(var(--chart-4));
-  --color-chart-5: hsl(var(--chart-5));
-  --color-sidebar: hsl(var(--sidebar));
-  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
-  --color-sidebar-primary: hsl(var(--sidebar-primary));
-  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
-  --color-sidebar-accent: hsl(var(--sidebar-accent));
-  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
-  --color-sidebar-border: hsl(var(--sidebar-border));
-  --color-sidebar-ring: hsl(var(--sidebar-ring));
-
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-  --font-serif: var(--font-serif);
-
-  --radius-sm: calc(var(--radius) - 1px);
-  --radius-md: var(--radius);
-  --radius-lg: calc(var(--radius) + 3px);
-  --radius-xl: calc(var(--radius) + 5px);
-
-  --shadow-2xs: var(--shadow-2xs);
-  --shadow-xs: var(--shadow-xs);
-  --shadow-sm: var(--shadow-sm);
-  --shadow: var(--shadow);
-  --shadow-md: var(--shadow-md);
-  --shadow-lg: var(--shadow-lg);
-  --shadow-xl: var(--shadow-xl);
-  --shadow-2xl: var(--shadow-2xl);
-
-  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
-  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
-  --tracking-normal: var(--tracking-normal);
-  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
-  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
-  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+  --sidebar-border: var(--edge);
+  --sidebar-ring: var(--lime);
+  --font-sans: var(--font-outfit), 'Outfit', sans-serif;
+  --font-display: var(--font-outfit), 'Outfit', sans-serif;
+  --font-mono: var(--font-mono), 'Fira Code', monospace;
+  --radius: 0px;
 }
 
 
-.section-dark {
-  --background: var(--sheet-bg);
-  --foreground: var(--paper);
-  --muted-foreground: 0 0% 68%;
-  --border: 0 0% 16%;
-  --chart-1: var(--paper);
-  --chart-2: 0 0% 68%;
-  --muted: 0 0% 9%;
+
+.section-alt {
+  --background: var(--surface-alt);
+  --foreground: var(--ink);
+  --muted-foreground: var(--ink-dim);
+  --border: var(--edge);
 }
 
 @layer base {
   html {
-    font-size: 16px;
+    font-size: 18px;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+  }
+
+  html.lenis {
+    scroll-behavior: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
   }
 
   * {
@@ -144,61 +80,48 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    letter-spacing: var(--tracking-normal);
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
+  ::selection {
+    background: hsl(var(--lime) / 0.25);
+    color: hsl(var(--ink));
+  }
 }
 
 @layer utilities {
-  .dot-grid {
-    pointer-events: none;
-    position: fixed;
-    inset: 0;
-    z-index: 10;
-    mix-blend-mode: multiply;
-    background-image:
-      linear-gradient(hsl(var(--grid-line)) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--grid-line)) 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.6;
+  .lime-glow {
+    box-shadow: 0 0 24px hsl(var(--lime) / 0.12), 0 0 60px hsl(var(--lime) / 0.04);
   }
 
-  .crop-marks::before,
-  .crop-marks::after {
-    content: "";
-    pointer-events: none;
-    position: fixed;
-    z-index: 40;
-    width: 14px;
-    height: 14px;
-    border: 1px solid hsl(var(--ink) / 0.35);
-  }
-  .crop-marks::before {
-    top: 14px;
-    left: 14px;
-    border-right: none;
-    border-bottom: none;
-  }
-  .crop-marks::after {
-    bottom: 14px;
-    right: 14px;
-    border-left: none;
-    border-top: none;
+  .border-lime {
+    border-color: hsl(var(--lime));
   }
 
-  .grain-overlay {
-    pointer-events: none;
-    position: fixed;
-    inset: 0;
-    z-index: 999;
-    opacity: 0.06;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C%2Ffilter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C%2Fsvg%3E");
-    background-repeat: repeat;
-    background-size: 200px 200px;
+  .text-balance {
+    text-wrap: balance;
   }
+
+  .debug {
+    outline: 1px solid red;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--edge));
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--ink-dim));
 }
 
 @media (prefers-reduced-motion: reduce) {

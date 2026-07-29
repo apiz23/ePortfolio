@@ -57,7 +57,7 @@ const categories = [
 // the site's hairline --border token reads fine as a row divider but
 // disappears as a form-field outline, so form fields get their own contrast.
 const fieldClass =
-  "bg-background border-[hsl(var(--ink)/0.25)] focus-visible:border-[hsl(var(--ink))]";
+  "bg-background border-edge focus-visible:border-lime-400";
 
 export default function UploadProjectPage() {
   const router = useRouter();
@@ -266,11 +266,11 @@ export default function UploadProjectPage() {
   if (!unlocked) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background px-4">
-        <div className="w-full max-w-sm border border-[hsl(var(--ink)/0.15)] bg-[hsl(var(--muted))] rounded-[3px] p-6">
+        <div className="w-full max-w-sm border border-edge p-6">
           <p className="font-mono text-[12px] uppercase tracking-[0.14em] text-muted-foreground mb-1">
-            Sheet 00 / Access
+            Access
           </p>
-          <h1 className="font-serif font-black uppercase tracking-[-0.03em] text-foreground text-2xl mb-1">
+          <h1 className="font-display uppercase tracking-[-0.02em] text-foreground text-2xl mb-1">
             Admin Access
           </h1>
           <p className="text-sm text-muted-foreground mb-5">
@@ -318,10 +318,10 @@ export default function UploadProjectPage() {
             Back to Projects
           </Link>
           <p className="font-mono text-[12px] uppercase tracking-[0.14em] text-muted-foreground mb-1">
-            Sheet 00 / New Project
+            New Project
           </p>
           <h1
-            className="font-serif font-black uppercase tracking-[-0.04em] text-foreground"
+            className="font-display uppercase tracking-[-0.02em] text-foreground"
             style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
           >
             Add Project
@@ -333,7 +333,7 @@ export default function UploadProjectPage() {
 
         {/* Form */}
         <form onSubmit={onSubmit} className="space-y-6">
-          <Card className="rounded-[3px] shadow-none border-[hsl(var(--ink)/0.15)] bg-[hsl(var(--muted))]">
+          <Card className="border-edge bg-surface-alt">
             <CardHeader>
               <CardTitle className="font-mono text-[13px] uppercase tracking-[0.1em] text-muted-foreground font-normal">
                 Project Details
@@ -488,7 +488,7 @@ export default function UploadProjectPage() {
               </div>
 
               {/* Featured Checkbox */}
-              <div className="flex flex-row items-start space-x-3 space-y-0 rounded-md border border-[hsl(var(--ink)/0.15)] bg-background p-4">
+              <div className="flex flex-row items-start space-x-3 space-y-0 border border-edge bg-background p-4">
                 <Checkbox
                   id="featured"
                   checked={featured}
@@ -518,10 +518,10 @@ export default function UploadProjectPage() {
                   onDragLeave={handleDrag}
                   onDragOver={handleDrag}
                   onDrop={handleDrop}
-                  className={`relative border-2 border-dashed rounded-[3px] p-6 transition-all cursor-pointer bg-background ${
+                  className={`relative border-2 border-dashed p-6 transition-all cursor-pointer bg-background ${
                     dragActive
-                      ? "border-primary bg-primary/5"
-                      : "border-[hsl(var(--ink)/0.3)]"
+                      ? "border-lime-400 bg-lime-400/5"
+                      : "border-edge"
                   }`}
                 >
                   <input

@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useActiveSection } from "@/lib/use-active-section";
 
 const sheets = [
 	{ id: "home", label: "Intro" },
@@ -13,24 +13,8 @@ const sheets = [
 ];
 
 export default function TitleBlock() {
-	const [active, setActive] = useState(0);
-
-	useEffect(() => {
-		const observers: IntersectionObserver[] = [];
-		sheets.forEach((sheet, index) => {
-			const el = document.getElementById(sheet.id);
-			if (!el) return;
-			const obs = new IntersectionObserver(
-				([entry]) => {
-					if (entry.isIntersecting) setActive(index);
-				},
-				{ rootMargin: "-30% 0px -60% 0px" },
-			);
-			obs.observe(el);
-			observers.push(obs);
-		});
-		return () => observers.forEach((o) => o.disconnect());
-	}, []);
+	const activeId = useActiveSection(sheets);
+	const active = sheets.findIndex((s) => s.id === activeId);
 
 	return (
 		<motion.div
