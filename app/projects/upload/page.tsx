@@ -57,7 +57,7 @@ const categories = [
 // the site's hairline --border token reads fine as a row divider but
 // disappears as a form-field outline, so form fields get their own contrast.
 const fieldClass =
-  "bg-background border-edge focus-visible:border-lime-400";
+  "bg-background border-edge focus-visible:border-purple-500";
 
 export default function UploadProjectPage() {
   const router = useRouter();
@@ -520,7 +520,7 @@ export default function UploadProjectPage() {
                   onDrop={handleDrop}
                   className={`relative border-2 border-dashed p-6 transition-all cursor-pointer bg-background ${
                     dragActive
-                      ? "border-lime-400 bg-lime-400/5"
+                      ? "border-purple-500 bg-purple-500/5"
                       : "border-edge"
                   }`}
                 >

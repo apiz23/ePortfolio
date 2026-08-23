@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Outfit, Fira_Code } from "next/font/google";
+import { Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import { Toaster } from "sonner";
 import ScrollToTop from "@/components/scroll-top";
 import { Analytics } from "@vercel/analytics/next";
 import { Providers } from "@/components/providers";
 import Navbar from "@/components/Navbar";
 
-const outfit = Outfit({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-outfit",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-jakarta",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const firaCode = Fira_Code({
+const spaceMono = Space_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
-        className={`${outfit.variable} ${firaCode.variable} font-sans font-semibold bg-background antialiased`}
+        className={`${jakarta.variable} ${spaceMono.variable} font-sans font-semibold bg-background antialiased`}
       >
         <Providers>
           <Navbar />

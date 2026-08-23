@@ -77,7 +77,7 @@ const educationDetails = [
 	},
 ];
 
-const timelineColors = ["bg-lime-400", "bg-cyan-400", "bg-muted-foreground/50"];
+const timelineColors = ["bg-purple-500", "bg-cyan-400", "bg-muted-foreground/50"];
 
 export default function Education() {
 	const sectionRef = useRef<HTMLElement>(null);
@@ -96,8 +96,7 @@ export default function Education() {
 		direction: "up",
 	});
 
-	useEffect(() => {
-		const loadData = async () => {
+	const loadData = async () => {
 			try {
 				setIsLoading(true);
 				setError(null);
@@ -115,11 +114,12 @@ export default function Education() {
 				}
 			} catch (err) {
 				console.error(err);
-				setError("Failed to load data");
+				setError("Failed to load chart data");
 			} finally {
 				setIsLoading(false);
 			}
 		};
+	useEffect(() => {
 		loadData();
 	}, [selectedValue]);
 
@@ -138,10 +138,10 @@ export default function Education() {
 			id="education"
 			className="py-24 border-t border-edge"
 		>
-			<div className="max-w-6xl mx-auto px-6 sm:px-10">
+			<div className="max-w-5xl mx-auto px-6 sm:px-10">
 				<div className="flex items-center gap-3 mb-2">
-					<span className="h-px w-6 bg-lime-400" />
-					<span className="font-mono text-[11px] uppercase tracking-[0.15em] text-lime-400">
+					<span className="h-px w-6 bg-purple-500" />
+					<span className="font-mono text-[11px] uppercase tracking-[0.15em] text-purple-500">
 						Education
 					</span>
 				</div>
@@ -168,7 +168,7 @@ export default function Education() {
 									<TimelineDate className="font-mono text-[13px] text-muted-foreground mb-0 block">
 										{edu.period}
 									</TimelineDate>
-									<p className="font-mono text-[12px] text-lime-400/70 mt-0.5">
+									<p className="font-mono text-[12px] text-purple-500/70 mt-0.5">
 										{edu.note}
 									</p>
 								</div>
@@ -238,15 +238,22 @@ export default function Education() {
 							<motion.div
 								animate={{ rotate: 360 }}
 								transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-								className="h-8 w-8 rounded-full border-2 border-edge border-t-lime-400"
+								className="h-8 w-8 rounded-full border-2 border-edge border-t-purple-500"
 							/>
 						</div>
 					) : error ? (
 						<div className="h-[280px] flex flex-col items-center justify-center gap-3 text-muted-foreground border border-edge">
 							<BookOpen className="h-8 w-8" />
 							<p className="font-mono text-[13px] text-center">
-								Failed to load chart data
+								{error}
 							</p>
+							<button
+								type="button"
+								onClick={loadData}
+								className="font-mono text-[12px] uppercase tracking-[0.08em] text-purple-500 hover:text-purple-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+							>
+								Try again
+							</button>
 						</div>
 					) : (
 						<>
@@ -259,8 +266,8 @@ export default function Education() {
 									>
 										<defs>
 											<linearGradient id="gpaGradient" x1="0" y1="0" x2="0" y2="1">
-												<stop offset="0%" stopColor="hsl(var(--lime))" stopOpacity={0.2} />
-												<stop offset="100%" stopColor="hsl(var(--lime))" stopOpacity={0} />
+												<stop offset="0%" stopColor="hsl(var(--purple))" stopOpacity={0.2} />
+												<stop offset="100%" stopColor="hsl(var(--purple))" stopOpacity={0} />
 											</linearGradient>
 											<linearGradient id="cpaGradient" x1="0" y1="0" x2="0" y2="1">
 												<stop offset="0%" stopColor="hsl(var(--cyan))" stopOpacity={0.15} />

@@ -8,8 +8,8 @@
   --ink: 0 0% 95%;
   --ink-dim: 0 0% 55%;
   --edge: 0 0% 14%;
-  --lime: 88 70% 52%;
-  --lime-alpha: 88 70% 52% / 0.1;
+  --purple: 263 70% 50%;
+  --purple-alpha: 263 70% 50% / 0.1;
   --cyan: 187 80% 55%;
   --orange: 25 90% 55%;
   --magenta: 330 65% 52%;
@@ -20,39 +20,37 @@
   --card-foreground: var(--ink);
   --popover: var(--surface-alt);
   --popover-foreground: var(--ink);
-  --primary: var(--lime);
+  --primary: var(--purple);
   --primary-foreground: var(--surface);
   --secondary: var(--surface-alt);
   --secondary-foreground: var(--ink);
   --muted: var(--surface-alt);
   --muted-foreground: var(--ink-dim);
-  --accent: var(--lime);
+  --accent: var(--purple);
   --accent-foreground: var(--surface);
   --destructive: var(--orange);
   --destructive-foreground: var(--surface);
   --border: var(--edge);
   --input: var(--edge);
-  --ring: var(--lime);
-  --chart-1: var(--lime);
+  --ring: var(--purple);
+  --chart-1: var(--purple);
   --chart-2: var(--cyan);
   --chart-3: var(--ink-dim);
   --chart-4: var(--orange);
   --chart-5: var(--magenta);
   --sidebar: var(--surface-alt);
   --sidebar-foreground: var(--ink);
-  --sidebar-primary: var(--lime);
+  --sidebar-primary: var(--purple);
   --sidebar-primary-foreground: var(--surface);
   --sidebar-accent: var(--surface);
   --sidebar-accent-foreground: var(--ink);
   --sidebar-border: var(--edge);
-  --sidebar-ring: var(--lime);
-  --font-sans: var(--font-outfit), 'Outfit', sans-serif;
-  --font-display: var(--font-outfit), 'Outfit', sans-serif;
-  --font-mono: var(--font-mono), 'Fira Code', monospace;
+  --sidebar-ring: var(--purple);
+  --font-sans: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+  --font-display: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+  --font-mono: var(--font-mono), 'Space Mono', monospace;
   --radius: 0px;
 }
-
-
 
 .section-alt {
   --background: var(--surface-alt);
@@ -87,18 +85,18 @@
   }
 
   ::selection {
-    background: hsl(var(--lime) / 0.25);
+    background: hsl(var(--purple) / 0.25);
     color: hsl(var(--ink));
   }
 }
 
 @layer utilities {
-  .lime-glow {
-    box-shadow: 0 0 24px hsl(var(--lime) / 0.12), 0 0 60px hsl(var(--lime) / 0.04);
+  .purple-glow {
+    box-shadow: 0 0 24px hsl(var(--purple) / 0.12), 0 0 60px hsl(var(--purple) / 0.04);
   }
 
-  .border-lime {
-    border-color: hsl(var(--lime));
+  .border-purple {
+    border-color: hsl(var(--purple));
   }
 
   .text-balance {

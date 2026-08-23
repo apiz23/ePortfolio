@@ -1,10 +1,23 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { EASE_OUT_EXPO, clipReveal, hoverLift, staggerContainer, staggerItem } from "@/lib/animations";
 
 const experiences = [
+  {
+    company: "OC Global Technology Sdn Bhd",
+    period: "Aug 2026 - Present",
+    position: "Software Support Intern",
+    location: "Johor Bahru, Malaysia · On-site",
+    periodPill: "1 mo",
+    achievements: [
+      "Assist in data testing for existing projects and prepare datasets using test cases",
+      "Conduct basic UI checks and quality assurance validations",
+      "Prepare and assist with user manuals, technical documentation, and project reporting",
+    ],
+    technologies: ["Software Testing", "Quality Assurance", "Technical Documentation"],
+  },
   {
     company: "Xeersoft",
     period: "2023 - 2024",
@@ -24,7 +37,6 @@ const experiences = [
 export default function Experience() {
   const sectionRef = useRef<HTMLElement>(null);
   const sectionInView = useInView(sectionRef, { once: true, margin: "-10%" });
-  const [hoveredExp, setHoveredExp] = useState<number | null>(null);
 
   return (
     <section
@@ -32,10 +44,10 @@ export default function Experience() {
       id="experience"
       className="section-alt py-24 border-t border-edge"
     >
-      <div className="max-w-6xl mx-auto px-6 sm:px-10">
+      <div className="max-w-5xl mx-auto px-6 sm:px-10">
         <div className="flex items-center gap-3 mb-2">
-          <span className="h-px w-6 bg-lime-400" />
-          <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-lime-400">
+          <span className="h-px w-6 bg-purple-500" />
+          <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-purple-500">
             Experience
           </span>
         </div>
@@ -63,16 +75,13 @@ export default function Experience() {
               key={exp.company}
               variants={staggerItem}
               {...hoverLift}
-              onMouseEnter={() => setHoveredExp(index)}
-              onMouseLeave={() => setHoveredExp(null)}
               className="grid grid-cols-1 md:grid-cols-[100px_1fr] gap-4 border-t border-edge py-5 relative group transition-all duration-300"
             >
               {/* Timeline dot */}
-              <div className="hidden md:block absolute left-[94px] top-[1.65rem] w-[11px] h-[11px] rounded-full border-2 border-edge bg-lime-400 -translate-x-1/2 z-10 group-hover:scale-125 transition-transform duration-300" />
+              <div className={`hidden md:block absolute left-[94px] top-[1.65rem] w-[11px] h-[11px] rounded-full border-2 border-edge ${index === 0 ? 'bg-purple-500' : 'bg-muted-foreground/40'} -translate-x-1/2 z-10 group-hover:scale-125 transition-transform duration-300`} />
 
               <div className="pt-0.5">
-                {/* Period pill */}
-                <span className="inline-block font-mono text-[10px] uppercase tracking-[0.08em] text-lime-400 border border-edge px-2 py-0.5 mb-2">
+                <span className="inline-block font-mono text-[10px] uppercase tracking-[0.08em] text-purple-500 border border-edge px-2 py-0.5 mb-2">
                   {exp.periodPill}
                 </span>
                 <p className="font-mono text-[13px] text-foreground">{exp.company}</p>
@@ -86,9 +95,7 @@ export default function Experience() {
                     <li key={achievement} className="flex items-start gap-3 text-[15px] text-muted-foreground leading-[1.6]">
                       <span
                         aria-hidden="true"
-                        className={`inline-block w-1.5 h-1.5 rounded-full mt-[0.6em] shrink-0 transition-colors duration-300 ${
-                          hoveredExp === index ? "bg-lime-400" : "bg-muted-foreground/40"
-                        }`}
+                        className="inline-block w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-[0.6em] shrink-0"
                       />
                       {achievement}
                     </li>

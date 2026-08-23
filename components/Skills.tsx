@@ -3,33 +3,36 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { clipReveal, EASE_OUT_EXPO, hoverGlow } from "@/lib/animations";
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiPostgresql,
-  SiDocker,
-  SiFigma,
-  SiGit,
-  SiSupabase,
-} from "react-icons/si";
+import Image from "next/image";
 
 const levelWidth = { Advanced: "w-[85%]", Intermediate: "w-[65%]", Familiar: "w-[40%]" };
 
 const skills = [
-  { icon: <SiNextdotjs />, name: "Next.js", level: "Advanced" as const },
-  { icon: <SiReact />, name: "React", level: "Advanced" as const },
-  { icon: <SiTypescript />, name: "TypeScript", level: "Advanced" as const },
-  { icon: <SiTailwindcss />, name: "Tailwind CSS", level: "Advanced" as const },
-  { icon: <SiNodedotjs />, name: "Node.js", level: "Intermediate" as const },
-  { icon: <SiPostgresql />, name: "PostgreSQL", level: "Intermediate" as const },
-  { icon: <SiSupabase />, name: "Supabase", level: "Intermediate" as const },
-  { icon: <SiGit />, name: "Git", level: "Advanced" as const },
-  { icon: <SiDocker />, name: "Docker", level: "Familiar" as const },
-  { icon: <SiFigma />, name: "Figma", level: "Familiar" as const },
+  { src: "/svg/nextjs.svg", alt: "Next.js", name: "Next.js", level: "Advanced" as const },
+  { src: "/svg/react.svg", alt: "React", name: "React", level: "Advanced" as const },
+  { src: "/svg/typescript.svg", alt: "TypeScript", name: "TypeScript", level: "Advanced" as const },
+  { src: "/svg/tailwindcss.svg", alt: "Tailwind CSS", name: "Tailwind CSS", level: "Advanced" as const },
+  { src: "/svg/nodejs.svg", alt: "Node.js", name: "Node.js", level: "Intermediate" as const },
+  { src: "/svg/postgresql.svg", alt: "PostgreSQL", name: "PostgreSQL", level: "Intermediate" as const },
+  { src: "/svg/supabase.svg", alt: "Supabase", name: "Supabase", level: "Intermediate" as const },
+  { src: "/svg/git.svg", alt: "Git", name: "Git", level: "Advanced" as const },
+  { src: "/svg/docker.svg", alt: "Docker", name: "Docker", level: "Familiar" as const },
+  { src: "/svg/figma.svg", alt: "Figma", name: "Figma", level: "Familiar" as const },
 ];
+
+function SkillIcon({ src, alt, isHovered }: { src: string; alt: string; isHovered: boolean }) {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={24}
+      height={24}
+      className={`transition-all duration-300 ${
+        isHovered ? "grayscale hue-rotate-[260deg] saturate-[3] brightness-125" : ""
+      }`}
+    />
+  );
+}
 
 export default function Skills() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -42,10 +45,10 @@ export default function Skills() {
       id="skills"
       className="section-alt py-24 border-t border-edge"
     >
-      <div className="max-w-6xl mx-auto px-6 sm:px-10">
+      <div className="max-w-5xl mx-auto px-6 sm:px-10">
         <div className="flex items-center gap-3 mb-2">
-          <span className="h-px w-6 bg-lime-400" />
-          <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-lime-400">
+          <span className="h-px w-6 bg-purple-500" />
+          <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-purple-500">
             Skills & Tools
           </span>
         </div>
@@ -53,7 +56,7 @@ export default function Skills() {
           variants={clipReveal}
           initial="hidden"
           animate={sectionInView ? "visible" : "hidden"}
-          className="font-display text-foreground tracking-[-0.02em] leading-[0.95] mb-10"
+          className="font-display text-foreground tracking-[-0.02em] leading-[0.95] mb-12"
           style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)" }}
         >
           SKILLS
@@ -76,14 +79,14 @@ export default function Skills() {
                 animate={{
                   opacity: hoveredIndex === index ? 1 : 0,
                 }}
-                className="absolute inset-0 bg-lime-400/5 pointer-events-none"
+                className="absolute inset-0 bg-purple-500/5 pointer-events-none"
               />
 
               {/* Icon with glow on hover */}
               <span className={`text-2xl transition-all duration-300 relative z-10 ${
-                hoveredIndex === index ? "text-lime-400 drop-shadow-[0_0_8px_hsl(var(--lime)/0.4)]" : "text-muted-foreground"
+                hoveredIndex === index ? "text-purple-500 drop-shadow-[0_0_8px_hsl(var(--purple)/0.4)]" : "text-muted-foreground"
               }`}>
-                {skill.icon}
+                <SkillIcon src={skill.src} alt={skill.alt} isHovered={hoveredIndex === index} />
               </span>
 
               <span className="font-display text-[17px] text-foreground tracking-[-0.01em] relative z-10">
@@ -91,7 +94,7 @@ export default function Skills() {
               </span>
 
               <span className={`font-mono text-[10px] uppercase tracking-[0.1em] relative z-10 transition-colors duration-300 ${
-                hoveredIndex === index ? "text-lime-400" : "text-muted-foreground"
+                hoveredIndex === index ? "text-purple-500" : "text-muted-foreground"
               }`}>
                 {skill.level}
               </span>
@@ -103,7 +106,7 @@ export default function Skills() {
                   animate={sectionInView ? { scaleX: 1 } : { scaleX: 0 }}
                   transition={{ delay: 0.3 + index * 0.04, duration: 0.6, ease: EASE_OUT_EXPO }}
                   style={{ transformOrigin: "left" }}
-                  className={`h-full bg-lime-400 ${levelWidth[skill.level]}`}
+                  className={`h-full bg-purple-500 ${levelWidth[skill.level]}`}
                 />
               </div>
             </motion.div>
